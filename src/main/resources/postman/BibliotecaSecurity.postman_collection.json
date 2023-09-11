@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "7ef80761-78dc-4abb-9f5e-29c5ff744658",
+		"name": "BibliotecaSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28447111"
+	},
+	"item": [
+		{
+			"name": "cadastrar livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Sistemas Orientados a Objetos\",\r\n    \"autor\":\"Pablo Rangel\",\r\n    \"datadeLancamento\":\"2021\",\r\n    \"isbn\":\"9786588431412\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/bibliotecasecurity"
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar todos os livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/bibliotecasecurity"
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar livro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Sistemas Orientados a Objetos\",\r\n    \"autor\":\"Pablo Rangel\",\r\n    \"datadeLancamento\":\"2022\",\r\n    \"isbn\":\"9786588431412\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/bibliotecasecurity/1"
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar livro por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/bibliotecasecurity/2"
+			},
+			"response": []
+		},
+		{
+			"name": "apagar livro por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/bibliotecasecurity/3"
+			},
+			"response": []
+		}
+	]
+}
