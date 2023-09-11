@@ -1,16 +1,11 @@
 package Repository;
 
 import Model.Livro;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface LivroRepository {
-    List<Livro> findAll();
+public interface LivroRepository extends JpaRepository<Livro, Long> {
 
-    Optional<Livro> findByID(Long codigo);
-
-    Livro save(Livro livro);
-
-    void delete(Long codigo);
 }
