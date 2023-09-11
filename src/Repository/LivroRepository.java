@@ -7,7 +7,10 @@ import java.util.Optional;
 
 public interface LivroRepository {
     List<Livro> findAll();
-    Optional<Livro> findByID( Long codigo);
+
+    Optional<Livro> findByID(Long codigo);
+
     Livro save(Livro livro);
+
     void delete(Long codigo);
 }

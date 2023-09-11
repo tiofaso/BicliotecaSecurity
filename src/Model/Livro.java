@@ -2,12 +2,12 @@ package Model;
 
 public class Livro {
     private Long codigo;
-    private  String nome;
-    private  String autor;
-    private  String datadeLancamento;
+    private String nome;
+    private String autor;
+    private String datadeLancamento;
 
 
-    public  Livro() {
+    public Livro() {
     }
 
 
