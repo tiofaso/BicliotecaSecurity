@@ -2,6 +2,8 @@ package Controller;
 
 import Model.Livro;
 import Service.LivroService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,12 +17,12 @@ public class LivroController {
         this.livroService = livroService;
     }
 
-    @getMapping
+    @GetMapping ///todo testar
     public List<Livro> getAllLivros() {
         return livroService.getAllLivros();
     }
 
-    @getMapping("codigo")
+    @GetMapping("/codigo")
     public Livro getLivroById(@PathVariable Long codigo) {
         return livroService.getLivroById(codigo);
     }
@@ -28,13 +30,14 @@ public class LivroController {
     @PostMapping
     public Livro cadastrarLivro(@RequestBody Livro livro) {
         return livroService.cadastrarLivro(livro);
+    }
 
-        @PutMapping
-        public Livro alterarLivro (@PathVariable Long codigo, @RequestBoby Livro livro){
+    @PutMapping
+        public Livro alterarLivro (@PathVariable Long codigo, @RequestBody Livro livro){
             return livroService.alterarLivro(codigo, livro);
-        }
-        @DeleteMapping
+    }
+    @DeleteMapping
         public void deletarLivro (@PathVariable Long codigo){
             livroService.deletarLivro(codigo);
-        }
     }
+}
