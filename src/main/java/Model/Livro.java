@@ -1,51 +1,28 @@
 package Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "tb_livro")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Livro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
+
+    @Column(length = 100)
     private String nome;
+
+    @Column(length = 50)
     private String autor;
-    private String datadeLancamento;
 
+    private LocalDate datadeLancamento;
 
-    public Livro() {
-    }
-
-
-    public Livro(Long codigo, String nome, String autor, String datadeLancamento) {
-        this.nome = nome;
-        this.autor = autor;
-        this.datadeLancamento = datadeLancamento;
-    }
-
-    public Long getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getDatadeLancamento() {
-        return datadeLancamento;
-    }
-
-    public void setDatadeLancamento(String datadeLancamento) {
-        this.datadeLancamento = datadeLancamento;
-    }
 }
