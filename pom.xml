@@ -8,10 +8,10 @@
 		<version>2.7.14</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com</groupId>
+	<groupId>com.castalisa</groupId>
 	<artifactId>BibliotecaSecurity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EscolaZup</name>
+	<name>BibliotecaSecurity</name>
 	<description>API de gerenciamento de biblioteca com Spring Security</description>
 	<properties>
 		<java.version>11</java.version>
